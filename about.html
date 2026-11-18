@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head><!-- The head is a container for information ABOUT the page.
+           Nothing in here appears on the page. The browser reads it, the visitor never sees it. -->
+
+	<!-- Which character set to use. Leave this out and apostrophes turn into garbage. -->
+	<meta charset="utf-8">
+	<!-- Tells a phone to use its real width instead of pretending to be a desktop. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The browser tab text, and what Google shows in search results. Not a heading on the page. -->
+	<title>About | Rise Coffee</title>
+
+	<!-- STYLES: normalize first, then layout, then style.
+	     General to specific. When two rules clash, the later one wins. -->
+	
+	<!-- STEP 1: your two stylesheet links go here -->
+	<link rel="stylesheet" href="normalize.css"> <!-- browser default settings -->
+	<link rel="stylesheet" href="layout.css"> <!-- structure and layout-->
+	<link rel="stylesheet" href="style.css"> <!-- styling to page elements -->
+
+	<!-- FONTS -->
+	<!-- STEP 2: your Google Fonts links go here -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body><!-- The body holds everything the visitor actually SEES. -->
+
+	<!-- HEADER: the strip along the top. It is the same on every page of the site,
+	     which is why it lives outside <main>. -->
+	<header>
+		<!-- LOGO -->
+		<a href="index.html"><img src="images/rise-logo.svg" class="rise-logo" alt="rise coffee logo"></a>
+
+		<!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
+		     CSS takes the bullets off later, but underneath it stays a list, because that is what it is. -->
+		<nav id="main-menu">
+			<ul>
+				<li><a class="nav-link" href="index.html">Home</a></li>
+				<li><a class="nav-link" href="about.html">About</a></li>
+				<li><a class="nav-link" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- The # in this href jumps to the element with id="visit" further down THIS page,
+		     instead of opening a different page. -->
+		<a class="button nav-visit" href="#visit">Visit Us</a>
+		<div class="hamburger">
+			<div class="hamburger-bar"></div>
+			<div class="hamburger-bar"></div>
+			<div class="hamburger-bar"></div>
+		</div>
+	</header>
+
+	<!-- MAIN: everything between the header and the footer. This is the part that is
+	     actually THIS page. One <main> per page. -->
+	<main>
+
+		<!-- SECTION: one horizontal band of the page. Look at the mockup: every time the
+		     background colour changes, a new section starts. This page has five. 
+				
+				From here on, every section has the same four levels:
+		         section  →  container  →  row  →  col
+		     	The section is the band. The container holds the width. The row makes its
+		     	children sit side by side. The columns are the things sitting side by side.-->
+
+		<!-- HERO SECTION: the first thing a visitor sees. -->
+		
+		<section class="section-padding">
+			<div class="container">
+
+				<div class="row row-justify-center">
+					<!-- DIV: a plain box with no meaning. The class is what gives it a job. -->
+					<div class="col col-lg-8 col-md-12 text-center">
+						<!-- h1 is the most important heading on the page. Only ever one per page. -->
+						<h1>about us</h1>
+					</div>
+				</div><!-- row ends -->
+
+				<div class="row">
+					<div class="col col-lg-12 col-md-12 col-sm-12">
+						<!-- img has no closing tag. An image is a thing, not a container, so there is nothing to wrap around and nothing to close. img-full makes it fill its column. Every image needs alt text. -->
+						<div class="hero-img-2">
+							<img src="images/rise-icon-3.svg" class="hero-icon-2" alt="">
+						</div>
+					</div>
+				</div><!-- row ends -->
+
+			</div><!-- container ends -->
+		</section>
+
+
+		<!-- OUR STORY SECTION -->
+		<section class="background-gold section-padding position-relative">
+			<img src="images/gradient-1.png" class="gradient-2" alt="">
+			<div class="container z-index-2">
+				
+				<!-- ROW -->
+				<div class="row row-align-center">
+
+					<!-- COLUMN 1-->
+					<div class="col col-lg-8 col-md-7 col-sm-12">
+						<h2>our story</h2>
+						<p>Rise Coffee began as a pop-up espresso cart in 2016, run by Jenny & Mark who believed mornings deserved better. What started with a borrowed machine and a handful of regulars has grown into a community hub where great coffee meets genuine connection. We’ve stayed true to our roots: small-batch roasting, a love for craft, and a commitment to keeping coffee approachable.</p>
+					</div>
+					
+				<!-- COLUMN 2 -->
+				<div class="col col-lg-4 col-md-5 col-sm-12">
+					<div class="card-img-wrap">
+						<img src="images/rise-coffee-7.jpg" class="card-img" alt="Two people walking in a hallway talking">
+					</div>
+				</div>
+
+			</div><!-- row ends -->
+			
+			</div><!-- container ends -->
+
+		</section>
+
+
+		<!-- OUR VALUES SECTION: the three cards.
+		     Look at columns 1, 2 and 3 below. They are the SAME block written three times with different words. Write one, get it right, then copy it.
+
+		     Two rows here: a full-width heading, then three equal columns.
+		     Three columns of 4 add up to 12. They always add up to 12. -->
+		<section class="section-padding">
+			<div class="container">
+			
+			<!-- ROW -->
+			<div class="row row-justify-center">
+				<div class="col col-lg-12 col-md-12 col-sm-12">
+					<h2 class="text-center">our values</h2>
+				</div>
+			</div><!-- row ends -->
+
+
+			<!-- ROW -->
+			<div class="row row-align-center">
+				
+				<!-- COLUMN 1-->
+				<div class="col col-lg-4 col-md-6 col-sm-12">
+					<img src="images/people-icon.svg" class="center-image" alt="An icon with three people">
+					<h3 class="text-center">community first</h3>
+					<p class="text-center">Coffee is more than a drink; it’s a way to bring people together.</p>
+						<div class="card-border-2">
+						</div>
+				</div><!-- row ends-->
+
+				<!-- COLUMN 2 -->
+				<div class="col col-lg-4 col-md-6 col-sm-12">
+					<img src="images/heart-icon.svg" class="center-image" alt="A heart">
+					<h3 class="text-center">care over pretension</h3>
+					<p class="text-center">We source responsibly and roast with care, but keep the vibe laid-back and welcoming.</p>
+						<div class="card-border-2">
+						</div>
+				</div>
+
+				<!-- COLUMN 3 -->
+				<div class="col col-lg-4 col-md-6 col-sm-12">
+					<img src="images/leaf-icon.svg" class="center-image" alt="A leaf">
+					<h3 class="text-center">sustainability always</h3>
+					<p class="text-center">From cups to direct-trade partnerships, we believe every choice matters.</p>
+					<div class="card-border-2">
+					</div>
+				</div>
+			
+			</div><!-- row ends -->
+		
+		</div><!-- container ends -->
+	</section>
+
+
+		<!-- EVENTS SECTION The id="inquire-now" jumps to the footer.-->
+		<section id="inquire-now" class="section-padding">
+			<div class="container">
+			
+			<!-- ROW -->
+			<div class="row row-align-center">
+				
+				<!-- COLUMN 1: the image -->
+				<div class="col col-lg-6 col-md-7 col-sm-12">
+					<div class="card-img-wrap-2">
+						<img src="images/rise-coffee-8.jpg" class="card-img" alt="People gathering at a market">
+					</div>
+				</div>
+				
+				<!-- COLUMN 2: the text -->
+				<div class="col col-lg-6 col-md-5 col-sm-12">
+					<h2>events at rise</h2>
+					<p>Looking for a space with good energy (and even better coffee)? Our café is available for community gatherings, art shows, live music, workshops, and private events. Whether you’re planning an intimate reading or a lively launch party, we’ve got the space — and, of course, the coffee.</p>
+					<a href="#site-footer" class="button-secondary">Inquire Now</a>
+				</div>
+			
+			</div><!-- row ends -->
+			
+			</div><!-- container ends -->
+		</section>
+		
+		<!--More than a Cafe Section-->
+		<section class="background-gold section-padding position-relative">
+			<img src="images/gradient-1.png" class="gradient-2" alt="">
+			<div class="container z-index-2">
+                
+                <!-- ROW -->
+				<div class="row row-align-center">
+
+					<div class="col col-lg-6 col-md-6 col-sm-12">
+						<h2>more than a cafe</h2>
+						<p>We’re proud to support local artists, host open mic nights, and partner with neighborhood nonprofits. When you visit Rise Coffee, you’re not just grabbing a latte — you’re plugging into a space that celebrates creativity, connection, and community.</p>
+					</div>
+
+					<div class="col col-lg-6 col-md-6 col-sm-12">
+						<div class="card-img-wrap-2">
+							<img src="images/rise-coffee-3.jpg" class="card-img" alt="Coffee cup on a table">
+						</div>
+					</div>
+			</div><!-- row ends -->
+		
+		</div><!--container ends-->
+		</section>
+
+
+		<!-- TESTIMONIALS SECTION: maroon band in the mockup.
+		     text-white goes on EACH element that needs it, not on the section.
+		     A colour inherited from a parent loses to a rule that targets the element directly, and h2 already has a colour of its own.-->
+		<section class="section-padding background-maroon">
+			<div class="container">
+				
+			<!-- ROW -->
+			<div class="row row-justify-center">
+				<div class="col col-lg-8 col-md-12 col-sm-12 text-center">
+					<img src="images/rise-icon-2.svg" class="center-image testimonials-icon" alt="">
+					<h2 class="text-white center-text">what our regulars are saying...</h2>
+					<h3 class="text-white center-text italic-text space-mono-regular">“Perfect spot for studying. Great coffee and even better vibes”</h3>
+					<p class="space-mono-bold text-white center-text">— MIGUEL R .</p>
+				</div>
+			</div><!-- row ends -->
+
+		</div><!-- container ends -->
+	</section>
+
+	</main>
+
+
+	<!-- FOOTER: three equal columns. Same shape as the known for section,
+	     4 + 4 + 4 = 12. The footer sits outside <main> because it repeats
+	     on every page, exactly like the header. -->
+	<footer id="site-footer" class="section-padding background-dark-maroon">
+		<div class="container">
+
+			<!-- ROW -->
+			<div class="row row-justify-center">
+
+				<!-- COLUMN 1 -->
+				<div class="col col-lg-4 col-md-4 col-sm-12">
+					<a href="index.html"><img src="images/rise-logo.svg" class="rise-logo-footer" alt="rise coffee logo"></a>
+					<p class="text-white">© 2026 Rise Coffee</p>
+					<a href="#" class="nav-link">Privacy Policy</a>
+					<a href="#" class="nav-link">Terms</a>
+				</div>
+
+				<!-- COLUMN 2 -->
+				<div class="col col-lg-4 col-md-4 col-sm-12">
+					<h3 class="text-white">Get in Touch</h3>
+					<p class="text-white">780-939-5224</p>
+					<p class="text-white">hello@risecoffee.com</p>
+					<p class="text-white">304 Main St<br>Wellington, ON  K0K 3L0</p>
+				</div>
+
+				<!-- COLUMN 3 -->
+				<div class="col col-lg-4 col-md-4 col-sm-12">
+					<h3 class="text-white">Hours</h3>
+					<ul class="no-bullets">
+						<li class="text-white">Monday &nbsp;<b>7am – 5pm</b></li>
+						<li class="text-white">Tuesday &nbsp;<b>7am – 5pm</b></li>
+						<li class="text-white">Wednesday &nbsp;<b>7am – 5pm</b></li>
+						<li class="text-white">Thursday &nbsp;<b>7am – 7pm</b></li>
+						<li class="text-white">Friday &nbsp;<b>7am – 5pm</b></li>
+						<li class="text-white">Saturday &nbsp;<b>9am – 5pm</b></li>
+						<li class="text-white">Sunday &nbsp;<b>9am – 3pm</b></li>
+					</ul>
+				</div>
+
+			</div><!-- row ends -->
+
+		</div><!-- container ends -->
+	</footer>
+
+	<script>
+		const burger = document.querySelector(".hamburger");
+		const menu = document.querySelector("nav");
+
+		function setMenu(open) {
+			burger.setAttribute("aria-expanded", open);
+			menu.classList.toggle("is-open", open);
+		}
+
+		burger.addEventListener("click", function () {
+			setMenu(burger.getAttribute("aria-expanded") !== "true");
+		});
+
+		document.addEventListener("keydown", function (event) {
+			if (event.key === "Escape") {
+				setMenu(false);
+				burger.focus();
+			}
+		});
+
+		window.addEventListener("resize", function () {
+			setMenu(false);
+		});
+	</script>
+
+</body>
+</html>
